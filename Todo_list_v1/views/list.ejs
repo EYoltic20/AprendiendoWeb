@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class = "box" id="heading">
+        <h1>Hoy es <%=day%> </h1>
+    </div>
+    <div class = "box">
+        <%lista.forEach(function(element){%>
+            <div class = "item">
+                <input type="checkbox">
+                <p><%=element%></p>
+            </div>
+        <%});%>
+        <form class = "items" action="/compose" method="post">
+            <input type="text" name="newItem" placeholder="Nueva lista" autocomplete="off" >
+        <button type="submit" name="btn">+</button>
+        </form>
+</div>
+
+
+</body>
+</html>
